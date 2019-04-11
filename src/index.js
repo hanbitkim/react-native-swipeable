@@ -336,7 +336,10 @@ export default class Swipeable extends PureComponent {
     const animationFn = this._getReleaseAnimationFn();
     const animationConfig = this._getReleaseAnimationConfig();
 
-    onSwipeRelease(event, gestureState, this);
+    const handle = onSwipeRelease(event, gestureState, this);
+    if (handle) {
+      return;
+    }
 
     if (leftActionActivated) {
       onLeftActionRelease(event, gestureState, this);
