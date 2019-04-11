@@ -1,3 +1,4 @@
 example/
-src/
 demo.gif
+yarn.lock
+Makefile
